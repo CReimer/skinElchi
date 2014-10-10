@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE displayvolume SYSTEM "../../../dtd/displayvolume.dtd">
+
+<displayvolume x="0" y="0" width="100%" height="100%" fadetime="{fadeTime}">
+    <background>
+        <area x="0" y="96%" width="100%" height="4%" layer="1">
+            <fill color="{clrVolumeBarLower}" />
+            <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+            <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+        </area>
+    </background>
+
+    <volume>
+        <area x="{areaheight}*0.02" y="92%" width="{areawidth}-{areaheight}*0.02" height="4%" layer="2">
+            <drawtext x="10" valign="center" font="{vdrSml}" fontsize="100%" color="{clrVolumePrompt}" text="{tr(volume)}" />
+        </area>
+        <area x="{areaheight}*0.02" y="96%" width="{areawidth}-{areaheight}*0.02" height="4%" layer="3">
+            <drawrectangle x="{areaheight}*0.5" y="0" valign="center" width="{volume}/{maxvolume}*{areawidth}-{areaheight}" height="80%" color="{clrVolumeBarUpper}" />
+        </area>
+    </volume>
+</displayvolume>

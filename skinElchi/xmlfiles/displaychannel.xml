@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE displaychannel SYSTEM "../../../dtd/displaychannel.dtd">
+
+<displaychannel x="0" y="0" width="100%" height="100%" fadetime="{fadeTime}">
+    <background>
+      <!-- Channel Background -->
+      <area x="0" y="{areaheight}*0.765" width="{areawidth}" height="{areaheight}/100*8.5" layer="1">
+
+        <fill color="{clrBackground}" />
+        <drawellipse x="0" y="0" width="{areaheight}*0.185" height="{areaheight}*0.185" color="{clrTransparent}" quadrant="-2"/>
+        <drawellipse x="{areawidth} - {areaheight}*0.185" y="0" width="{areaheight}*0.185" height="{areaheight}*0.185" color="{clrTransparent}" quadrant="-1"/>
+      </area>
+      <!-- Channel Date Background -->
+      <area x="0" y="{areaheight}*0.765" width="32%" height="4%" layer="1">
+        <fill color="{clrChannelDateBg}" />
+        <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+        <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+         <drawellipse x="0" y="0" width="{areaheight}*0.385" height="{areaheight}*0.385" color="{clrTransparent}" quadrant="-2"/>
+      </area>
+      <!-- Channel Name Background -->
+      <area x="0" y="81%" width="80%" height="4%" layer="1">
+        <fill color="{clrChannelNameBg}" />
+        <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+        <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+      </area>
+      <!-- EPG Time Background -->
+      <area x="0" y="85%" width="7%" height="{areaheight}*0.15" layer="1">
+        <fill color="{clrChannelEpgTimeBg}" />
+        <drawellipse x="0" y="{areaheight} - {areaheight}*0.1" width="{areaheight}*0.1" height="{areaheight}*0.1" color="{clrTransparent}" quadrant="-3"/>
+      </area>
+      <!-- EPG Title Background -->
+      <area x="7%" y="85%" width="93%" height="{areaheight}*0.15" layer="1">
+        <fill color="{clrChannelEpgTitleBg}" />
+        <drawellipse x="{areawidth} - {areaheight}*0.1" y="{areaheight} - {areaheight}*0.1" width="{areaheight}*0.1" height="{areaheight}*0.1" color="{clrTransparent}" quadrant="-4"/>
+      </area>
+    </background>
+
+    <channelinfo>
+      <!-- Channel Number -->
+      <area condition="{channellogoexists}" x="{areawidth}*0.09" y="{areaheight}*0.765" width="65%" height="4%" layer="2">
+        <drawtext name="number" x="{areaheight}*0.5" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrChannelDateFg}" text="{channelnumber}" />
+      </area>
+      <area condition="not{channellogoexists}" x="0" y="{areaheight}*0.765" width="65%" height="4%" layer="2">
+        <drawtext name="number" x="{areaheight}*0.5" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrChannelDateFg}" text="{channelnumber}" />
+      </area>
+      <!-- Channel Name -->
+      <area condition="{channellogoexists}" x="{areawidth}*0.09" y="81%" width="65%" height="4%" layer="2">
+        <drawtext x="{areaheight}*0.5" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrChannelNameFg}" text="{channelname}" />
+      </area>
+      <area condition="not{channellogoexists}" x="0" y="81%" width="65%" height="4%" layer="2">
+        <drawtext x="{areaheight}*0.5" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrChannelNameFg}" text="{channelname}" />
+      </area>
+      <!-- Channellogo -->
+      <area condition="{channellogoexists}" x="0" y="73%" width="9%" height="12%" layer="2">
+        <fill color="FFDCDCDC" />
+      </area>
+      <area condition="{channellogoexists}" x="0" y="73%" width="9%" height="12%" layer="3">
+        <drawimage imagetype="channellogo" path="{channelid}" height="95%" width="95%" align="center" valign="center" />
+      </area>
+    </channelinfo>
+
+    <epginfo>
+      <!-- fontsize: 4% (100/15*4=26.6667)-->
+      <area x="0" y="85%" width="7%" height="15%" layer="2">
+        <drawtext x="0" y="0" align="center" font="{vdrOsd}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgTimeFg}" text="{currentstart}"/>
+        <drawtext x="0" y="51%" align="center" font="{vdrOsd}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgTimeFg}" text="{nextstart}"/>
+      </area>
+      <area x="7%" y="85%" width="{areawidth}-{areawidth}*0.1 - {areawidth}*0.065" height="15%" layer="2">
+        <drawtext name="currenttitle" x="2%" y="0" font="{vdrOsd}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgTitleFg}" text="{currenttitle}"/>
+        <drawtext x="2%" y="23%" font="{vdrSml}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgShortText}" text="{currentsubtitle}"/>
+        <drawtext x="2%" y="51%" font="{vdrOsd}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgTitleFg}" text="{nexttitle}"/>
+        <drawtext x="2%" y="75%" font="{vdrSml}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgShortText}" text="{nextsubtitle}"/>
+      </area>
+      <!-- hasVPS symbol -->
+      <area x="80%" y="81%" width="20%" height="4%" layer="2">
+        <drawimage name="vps" imagetype="icon" path="Cvps_off" x="2%" valign="center" width="14%" height="71%"/>
+        <drawimage condition="{hasVPS}" imagetype="icon" path="Cvps_on" x="{posx(vps)}" valign="center" width="{width(vps)}" height="{height(vps)}"/>
+      </area>
+    </epginfo>
+
+    <progressbar>
+        <area x="7%" y="85%" width="{areawidth}-{areawidth}*0.1-{areawidth}*0.07" height="15%" layer="2">
+            <drawrectangle x="{areawidth} / 100 * 0.5" y="0" width="{areawidth} / 100 * 0.5" height="{elapsed}/{duration}*{areaheight}" color="{clrChannelTimebarSeen}" />
+        </area>
+    </progressbar>
+
+    <statusinfo>
+      <area x="80%" y="81%" width="20%" height="4%" layer="2">
+          <drawimage name="vt" imagetype="icon" path="Ctxt_off" x="18%" valign="center" width="14%" height="71%"/>
+          <drawimage name="radio" imagetype="icon" path="Caudio_off" x="{posx(vt)} + {width(vt)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+          <drawimage name="dolbydigital" imagetype="icon" path="Cdolbydigital_off" x="{posx(radio)} + {width(radio)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+          <drawimage name="encrypted" imagetype="icon" path="Cencrypted_off" x="{posx(dolbydigital)} + {width(dolbydigital)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+          <drawimage name="rec" imagetype="icon" path="Crec_off" x="{posx(encrypted)} + {width(encrypted)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+
+          <drawimage condition="{hasVT}" imagetype="icon" path="Ctxt_on" x="{posx(vt)}" valign="center" width="{width(vt)}" height="{height(vt)}"/>
+          <drawimage condition="{isRadio}" imagetype="icon" path="Caudio_on" x="{posx(radio)}" valign="center" width="{width(radio)}" height="{height(radio)}"/>
+          <drawimage condition="{isDolby}" imagetype="icon" path="Cdolbydigital_on" x="{posx(dolbydigital)}" valign="center" width="{width(dolbydigital)}" height="{height(dolbydigital)}"/>
+          <drawimage condition="{isEncrypted}" imagetype="icon" path="Cencrypted_on" x="{posx(encrypted)}" valign="center" width="{width(encrypted)}" height="{height(encrypted)}"/>
+          <drawimage condition="{isRecording}" imagetype="icon" path="Crec_on" x="{posx(rec)}" valign="center" width="{width(rec)}" height="{height(rec)}"/>
+      </area>
+      <area x="{areawidth}*0.1 + {areawidth}*0.25" y="{areaheight}*0.765" width="{areawidth}-{areawidth}*0.1-{areawidth}*0.25" height="4%" layer="1">
+        <drawtext x="0" y="0" align="right" valign="center" font="{vdrSml}" fontsize="100%" color="{clrChannelSymbolOn}" text="{trackdesc} /{numaudiotracks} ({tracklang})  " />
+      </area>
+    </statusinfo>
+
+    <screenresolution>
+    </screenresolution>
+
+    <channelgroup>
+    </channelgroup>
+
+    <signalquality>
+    </signalquality>
+
+    <signalqualityback>
+    </signalqualityback>
+
+    <scrapercontent>
+    </scrapercontent>
+
+    <datetime>
+      <area x="0" y="{areaheight}*0.765" width="32%" height="4%" layer="2">
+        <drawtext x="0" y="0" align="right" valign="center" font="{vdrSml}" fontsize="100%" color="{clrChannelDateFg}" text="{daynameshort} {dayleadingzero}.{month}. {time}  " />
+      </area>
+    </datetime>
+
+    <message>
+        <area x="0" y="{areaheight}-{areaheight}*0.04" width="{areawidth}" height="{areaheight}*0.04" layer="3">
+            <drawrectangle condition="{status}" x="0" y="0" width="100%" height="100%" color="{clrMessageStatusBg}" />
+            <drawtext condition="{status}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageStatusFg}" text="{text}" />
+            <drawrectangle condition="{info}" x="0" y="0" width="100%" height="100%" color="{clrMessageInfoBg}" />
+            <drawtext condition="{info}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageInfoFg}" text="{text}" />
+            <drawrectangle condition="{warning}" x="0" y="0" width="100%" height="100%" color="{clrMessageWarningBg}" />
+            <drawtext condition="{warning}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageWarningFg}" text="{text}" />
+            <drawrectangle condition="{error}" x="0" y="0" width="100%" height="100%" color="{clrMessageErrorBg}" />
+            <drawtext condition="{error}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageErrorFg}" text="{text}" />
+
+            <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+            <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+        </area>
+    </message>
+</displaychannel>

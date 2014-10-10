@@ -1,0 +1,19 @@
+<menudetailedepg x="0" y="0" width="100%" height="100%" fadetime="0">
+
+    <detailheader>
+      <area x="1%" y="6%" width="99%" height="16%" layer="2">
+        <drawtext name="date" x="0" y="0" fontsize="25%" font="{vdrOsd}" color="{clrMenuEventTime}" text="{day} {date} {start} - {stop}"/>
+        <drawrectangle x="0" y="{posy(date)} + {height(date)}" width="{width(vps)}" height="25%" color="{clrMenuEventVpsBg}" />
+        <drawtext name="vps" x="0" y="{posy(date)} + {height(date)}" fontsize="25%" font="{vdrSml}" color="{clrMenuEventVpsFg}" text="VPS: "/>
+        <drawtext name="title" x="0" y="{posy(vps)} + {height(vps)}" fontsize="25%" font="{vdrOsd}" color="{clrMenuEventTitle}" text="{title}"/>
+        <drawtext x="0" y="{posy(title)} + {height(title)}" fontsize="25%" font="{vdrSml}" color="{clrMenuEventShortText}" text="{shorttext}"/>
+      </area>
+    </detailheader>
+
+    <tab name="Tab1" x="1%" y="23%" width="99%" height="71%" layer="2" scrollheight="{areaheight}/4">
+       <drawtextbox x="0" y="0" width="96%" font="{vdrSml}" fontsize="{areaheight}*0.0563" color="{clrMenuEventDescription}" text="{description}" />
+    </tab>
+
+    <tablabels>
+    </tablabels>
+</menudetailedepg>

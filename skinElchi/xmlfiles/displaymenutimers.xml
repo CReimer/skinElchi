@@ -1,0 +1,41 @@
+<menutimers x="0" y="0" width="100%" height="100%" fadetime="0">
+    <menuitems x="1%" y="6%" orientation="vertical" width="98%" height="88%" align="center" numlistelements="25">
+        <listelement>
+            <area x="0" y="0" width="100%" height="100%" layer="2">
+                <fill condition="{current}" color="{clrMenuItemCurrentBg}" />
+                <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+                <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+                <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+                <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+            </area>
+            <!-- datetime and icons -->
+            <area condition="not{current}" x="0" width="100%" layer="3">
+                <drawtext x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{channelnumber}" />
+                <drawtext x="9%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{dayname} {day}" />
+                <drawtext x="20%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{timerstart}" />
+                <drawtext x="27%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{timerstop}" />
+                <drawtext x="34%" width="{areawidth}-{areawidth}*0.34-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{title}" />
+                <drawimage condition="{flagactive}" imagetype="icon" path="ico_timer_active" x="{areawidth} - 0.5*{areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
+                <drawimage condition="not{flagactive}" imagetype="icon" path="ico_timer_inactive" x="{areawidth} - 0.5*{areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
+                <drawimage condition="{flagrecording}" name="active" imagetype="icon" path="ico_timer_recording" x="{areawidth} - {areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
+            </area>
+            <area condition="{current}" x="0" width="100%" layer="3">
+                <drawtext x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{channelnumber}" />
+                <drawtext x="9%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{dayname} {day}" />
+                <drawtext x="20%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{timerstart}" />
+                <drawtext x="27%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{timerstop}" />
+                <drawtext x="34%" width="{areawidth}-{areawidth}*0.34-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
+                <drawimage condition="{flagactive}" imagetype="icon" path="ico_timer_active" x="{areawidth} - 0.5*{areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
+                <drawimage condition="not{flagactive}" imagetype="icon" path="ico_timer_inactive" x="{areawidth} - 0.5*{areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
+                <drawimage condition="{flagrecording}" name="active" imagetype="icon" path="ico_timer_recording" x="{areawidth} - {areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
+            </area>
+        </listelement>
+    </menuitems>
+
+    <scrollbar>
+        <area condition="lt({height},1000)" x="99%" y="4%" width="1%" height="92%" layer="2">
+            <fill color="{clrMenuScrollbarTotal}" />
+            <drawrectangle x="0" y="{areaheight} * {offset} / 1000" width="{areawidth}" height="{areaheight} * {height} / 1000 - 8" color="{clrMenuScrollbarShown}" />
+        </area>
+    </scrollbar>
+</menutimers>

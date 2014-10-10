@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE displayreplay SYSTEM "../../../dtd/displayreplay.dtd">
+
+<displayreplay x="0" y="0" width="100%" height="100%" fadetime="{fadeTime}">
+    <background>
+        <area x="0" y="86%" width="100%" height="4%" layer="1">
+            <drawrectangle x="80%" y="0" width="20%" height="100%" color="{clrBackground}" />
+             <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+
+            <drawellipse x="{areawidth}*0.8-{areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrBackground}" quadrant="2"/>
+            <drawrectangle x="{areawidth}*0.8-{areaheight}*0.5" y="{areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrBackground}"/>
+            <drawellipse x="{areawidth}*0.8-{areaheight}" y="{areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrBackground}" quadrant="-4"/>
+        </area>
+
+        <area x="0" y="90%" width="100%" height="4%" layer="1">
+            <fill color="{clrBackground}" />
+            <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+            <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+        </area>
+
+        <area x="0%" y="94%" width="100%" height="4%" layer="1">
+            <drawrectangle name="symbolblock" x="80%" y="0" width="20%" height="100%" color="{clrBackground}" />
+            <drawellipse x="{posx(symbolblock)}-{areaheight}" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrBackground}" quadrant="-1"/>
+            <drawrectangle x="{posx(symbolblock)}-{areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrBackground}"/>
+            <drawellipse x="{posx(symbolblock)}-{areaheight}*0.5" y="{areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrBackground}" quadrant="3"/>
+
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+        </area>
+    </background>
+
+    <backgroundmodeonly>
+    </backgroundmodeonly>
+
+    <datetime>
+    </datetime>
+
+    <scrapercontent>
+    </scrapercontent>
+
+    <rectitle>
+        <area x="0" y="86%" width="100%" height="4%" layer="2">
+            <drawrectangle x="{posx(title)}-{areaheight}*0.5" y="0" valign="center" width="{posx(title)} + {width(title)} + {width(subtitle)} + {areaheight}" height="100%" color="{clrReplayTitleBg}" />
+            <drawtext x="{areaheight}*0.5" name="title" valign="center" font="{vdrSml}" fontsize="85%" color="{clrReplayTitleFg}" text="{rectitle}" />
+            <drawtext x="{posx(title)}+{width(title)}+10" name="subtitle" valign="center" font="{vdrSml}" fontsize="85%" color="{clrReplayTitleFg}" text=" ~ {recsubtitle}" />
+            <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+            <drawellipse x="{posx(title)} + {width(title)} + {width(subtitle)} + {areaheight}" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrReplayTitleBg}" quadrant="1"/>
+            <drawrectangle x="{posx(title)} + {width(title)} + {width(subtitle)} + {areaheight}" y="{areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrReplayTitleBg}"/>
+            <drawellipse x="{posx(title)} + {width(title)} + {width(subtitle)} + {areaheight}*1.5" y="{areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrReplayTitleBg}" quadrant="-3"/>
+            <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+        </area>
+    </rectitle>
+
+    <recinfo>
+    </recinfo>
+
+    <currenttime>
+        <area x="80%" y="86%" width="10%" height="4%" layer="2">
+            <drawtext x="0" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrReplayCurrent}" text="{reccurrent}" />
+        </area>
+    </currenttime>
+
+    <totaltime>
+        <area x="90%" y="86%" width="10%" height="4%" layer="2">
+            <drawtext x="0" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrReplayTotal}" text="{rectotal}" />
+        </area>
+    </totaltime>
+
+    <progressbar>
+        <area x="2%" y="90%" width="96%" height="4%" layer="2">
+            <drawrectangle x="0" y="0" valign="center" width="100%" height="80%" color="{clrReplayProgressRest}" />
+            <drawrectangle x="0" y="0" valign="center" width="{current}/{total}*{areawidth}" height="80%" color="{clrReplayProgressSeen}" />
+        </area>
+    </progressbar>
+
+    <cutmarks>
+        <area x="2%" y="90%" width="96%" height="4%" layer="3">
+            <loop name="marks" x="0" y="0" orientation="absolute">
+                <drawrectangle x="{marks[position]}/{marks[total]}*{areawidth}" y="0" width="1" height="100%" color="{clrReplayProgressMark}" />
+                <drawrectangle condition="{marks[startmark]}" x="{marks[position]}/{marks[total]}*{areawidth}" y="0" width="5" height="1" color="{clrReplayProgressMark}" />
+                <drawrectangle condition="{marks[startmark]}" x="{marks[position]}/{marks[total]}*{areawidth}" y="{areaheight}-1" width="5" height="1" color="{clrReplayProgressMark}" />
+                <drawrectangle condition="not{marks[startmark]}" x="{marks[position]}/{marks[total]}*{areawidth} - 5" y="0" width="5" height="1" color="{clrReplayProgressMark}" />
+                <drawrectangle condition="not{marks[startmark]}" x="{marks[position]}/{marks[total]}*{areawidth} - 5" y="{areaheight}-1" width="5" height="1" color="{clrReplayProgressMark}" />
+                <drawrectangle condition="{marks[startmark]}" x="{marks[position]}/{marks[total]}*{areawidth}" y="30%" width="{marks[endposition]}/{marks[total]}*{areawidth} - {marks[position]}/{marks[total]}*{areawidth}" height="40%" color="{clrReplayProgressSelected}" />
+            </loop>
+        </area>
+    </cutmarks>
+
+    <controlicons>
+        <area x="80%" y="94%" width="20%" height="4%" layer="1">
+          <drawimage name="frew" imagetype="icon" path="cfrew_off" x="4%" valign="center" width="14%" height="71%"/>
+          <drawimage name="srew" imagetype="icon" path="csrew_off" x="{posx(frew)} + {width(frew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+
+          <drawimage condition="not{play}" name="play" imagetype="icon" path="Cplay_off" x="{posx(srew)} + {width(srew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+
+          <drawimage name="sfwd" imagetype="icon" path="csfwd_off" x="{posx(play)} + {width(play)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+          <drawimage name="ffwd" imagetype="icon" path="cffwd_off" x="{posx(sfwd)} + {width(sfwd)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+
+          <drawimage condition="{rewind}" imagetype="icon" path="cfrew_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind1x}" imagetype="icon" path="cfrew1_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind2x}" imagetype="icon" path="cfrew2_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind3x}" imagetype="icon" path="cfrew3_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+
+          <drawimage condition="{play}" imagetype="icon" path="Cplay_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="not{pause}++{rewind}++{forward}" imagetype="icon" path="Cpause_off" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="{pause}++not{rewind}++not{forward}" imagetype="icon" path="Cpause_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          
+          <drawimage condition="{forward}" imagetype="icon" path="cffwd_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage condition="{forward1x}" imagetype="icon" path="cffwd1_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage condition="{forward2x}" imagetype="icon" path="cffwd2_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage condition="{forward3x}" imagetype="icon" path="cffwd3_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+
+          <drawimage condition="{isRadio}" imagetype="icon" path="Caudio_on" x="{posx(radio)}" valign="center" width="{width(radio)}" height="{height(radio)}"/>
+          <drawimage condition="{isDolby}" imagetype="icon" path="Cdolbydigital_on" x="{posx(dolbydigital)}" valign="center" width="{width(dolbydigital)}" height="{height(dolbydigital)}"/>
+          <drawimage condition="{isEncrypted}" imagetype="icon" path="Cencrypted_on" x="{posx(encrypted)}" valign="center" width="{width(encrypted)}" height="{height(encrypted)}"/>
+          <drawimage condition="{isRecording}" imagetype="icon" path="Crec_on" x="{posx(rec)}" valign="center" width="{width(rec)}" height="{height(rec)}"/>
+        </area>
+    </controlicons>
+
+    <controliconsmodeonly>
+    </controliconsmodeonly>
+
+    <jump>
+    </jump>
+
+    <message>
+        <area x="{areawidth}*0.1" y="{areaheight}-{areaheight}*0.04" width="{areawidth}-{areawidth}*0.1" height="{areaheight}*0.04" layer="4">
+            <drawrectangle condition="{status}" x="0" y="0" width="100%" height="100%" color="{clrMessageStatusBg}" />
+            <drawtext condition="{status}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageStatusFg}" text="{text}" />
+            <drawrectangle condition="{info}" x="0" y="0" width="100%" height="100%" color="{clrMessageInfoBg}" />
+            <drawtext condition="{info}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageInfoFg}" text="{text}" />
+            <drawrectangle condition="{warning}" x="0" y="0" width="100%" height="100%" color="{clrMessageWarningBg}" />
+            <drawtext condition="{warning}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageWarningFg}" text="{text}" />
+            <drawrectangle condition="{error}" x="0" y="0" width="100%" height="100%" color="{clrMessageErrorBg}" />
+            <drawtext condition="{error}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageErrorFg}" text="{text}" />
+
+            <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+            <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+        </area>
+    </message>
+</displayreplay>

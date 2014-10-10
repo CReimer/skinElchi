@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE displaymenu SYSTEM "../../../dtd/displaymenu.dtd" [
+<!ENTITY displaymenudefault SYSTEM "displaymenudefault.xml">
+<!ENTITY displaymenumain SYSTEM "displaymenumain.xml">
+<!ENTITY displaymenusetup SYSTEM "displaymenusetup.xml">
+<!ENTITY displaymenuschedules SYSTEM "displaymenuschedules.xml">
+<!ENTITY displaymenutimers SYSTEM "displaymenutimers.xml">
+<!ENTITY displaymenuchannels SYSTEM "displaymenuchannels.xml">
+<!ENTITY displaymenurecordings SYSTEM "displaymenurecordings.xml">
+<!ENTITY displaymenudetailepg SYSTEM "displaymenudetailepg.xml">
+<!ENTITY displaymenudetailrecording SYSTEM "displaymenudetailrecording.xml">
+<!ENTITY displaymenudetailtext SYSTEM "displaymenudetailtext.xml">
+]>
+
+<displaymenu x="0" y="0" width="100%" height="100%" fadetime="0">
+
+    <background>
+        <!-- Header -->
+        <area x="0" y="0" width="100%" height="{areaheight}*0.04" layer="1">
+            <fill color="{clrMenuTitleBg}" />
+            <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+        </area>
+        <!-- Main -->
+        <area x="0" y="{areaheight}*0.04" width="100%" height="{areaheight}-2*{areaheight}*0.04" layer="1">
+            <fill color="{clrBackground}" />
+        </area>
+    </background>
+
+    <header>
+    </header>
+
+    <datetime>
+        <area x="50%" y="0" width="49%" height="4%" layer="2">
+            <drawtext align="right" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuTitleFg}" text="{daynameshort} {dayleadingzero}. {month}. {time}" />
+        </area>
+    </datetime>
+
+    <message>
+        <area x="0" y="{areaheight}-2*{areaheight}*0.04" width="100%" height="{areaheight}*0.04" layer="2">
+            <drawrectangle condition="{status}" x="0" y="0" width="100%" height="100%" color="{clrMessageStatusBg}" />
+            <drawtext condition="{status}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageStatusFg}" text="{text}" />
+            <drawrectangle condition="{info}" x="0" y="0" width="100%" height="100%" color="{clrMessageInfoBg}" />
+            <drawtext condition="{info}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageInfoFg}" text="{text}" />
+            <drawrectangle condition="{warning}" x="0" y="0" width="100%" height="100%" color="{clrMessageWarningBg}" />
+            <drawtext condition="{warning}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageWarningFg}" text="{text}" />
+            <drawrectangle condition="{error}" x="0" y="0" width="100%" height="100%" color="{clrMessageErrorBg}" />
+            <drawtext condition="{error}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageErrorFg}" text="{text}" />
+
+            <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+            <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+        </area>
+    </message>
+
+    <colorbuttons>
+        <area x="0" y="{areaheight}-{areaheight}*0.04" width="25%" height="{areaheight}*0.04" layer="1">
+            <fill condition="{red1}" color="{clrButtonRedBg}"/>
+            <drawtext condition="{red1}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonRedFg}" text="{red}" />
+            <fill condition="{green1}" color="{clrButtonGreenBg}"/>
+            <drawtext condition="{green1}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonGreenFg}" text="{green}" />
+            <fill condition="{yellow1}" color="{clrButtonYellowBg}"/>
+            <drawtext condition="{yellow1}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonYellowFg}" text="{yellow}" />
+            <fill condition="{blue1}" color="{clrButtonBlueBg}"/>
+            <drawtext condition="{blue1}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonBlueFg}" text="{blue}" />
+
+            <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+        </area>
+        <area x="25%" y="{areaheight}-{areaheight}*0.04" width="25%" height="{areaheight}*0.04" layer="1">
+            <fill condition="{red2}" color="{clrButtonRedBg}"/>
+            <drawtext condition="{red2}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonRedFg}" text="{red}" />
+            <fill condition="{green2}" color="{clrButtonGreenBg}"/>
+            <drawtext condition="{green2}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonGreenFg}" text="{green}" />
+            <fill condition="{yellow2}" color="{clrButtonYellowBg}"/>
+            <drawtext condition="{yellow2}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonYellowFg}" text="{yellow}" />
+            <fill condition="{blue2}" color="{clrButtonBlueBg}"/>
+            <drawtext condition="{blue2}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonBlueFg}" text="{blue}" />
+        </area>
+        <area x="50%" y="{areaheight}-{areaheight}*0.04" width="25%" height="{areaheight}*0.04" layer="1">
+            <fill condition="{red3}" color="{clrButtonRedBg}"/>
+            <drawtext condition="{red3}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonRedFg}" text="{red}" />
+            <fill condition="{green3}" color="{clrButtonGreenBg}"/>
+            <drawtext condition="{green3}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonGreenFg}" text="{green}" />
+            <fill condition="{yellow3}" color="{clrButtonYellowBg}"/>
+            <drawtext condition="{yellow3}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonYellowFg}" text="{yellow}" />
+            <fill condition="{blue3}" color="{clrButtonBlueBg}"/>
+            <drawtext condition="{blue3}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonBlueFg}" text="{blue}" />
+        </area>
+        <area x="75%" y="{areaheight}-{areaheight}*0.04" width="25%" height="{areaheight}*0.04" layer="1">
+            <fill condition="{red4}" color="{clrButtonRedBg}"/>
+            <drawtext condition="{red4}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonRedFg}" text="{red}" />
+            <fill condition="{green4}" color="{clrButtonGreenBg}"/>
+            <drawtext condition="{green4}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonGreenFg}" text="{green}" />
+            <fill condition="{yellow4}" color="{clrButtonYellowBg}"/>
+            <drawtext condition="{yellow4}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonYellowFg}" text="{yellow}" />
+            <fill condition="{blue4}" color="{clrButtonBlueBg}"/>
+            <drawtext condition="{blue4}" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrButtonBlueFg}" text="{blue}" />
+
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+        </area>
+    </colorbuttons>
+    &displaymenudefault;
+    &displaymenumain;
+    &displaymenusetup;
+    &displaymenuschedules;
+    &displaymenutimers;
+    &displaymenuchannels;
+    &displaymenurecordings;
+    &displaymenudetailepg;
+    &displaymenudetailrecording;
+    &displaymenudetailtext;
+</displaymenu>

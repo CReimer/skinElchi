@@ -1,0 +1,44 @@
+<menumain x="0" y="0" width="100%" height="100%" fadetime="0">
+
+    <timers>
+    </timers>
+
+    <header>
+    </header>
+
+    <discusage>
+        <area x="0" y="0" width="100%" height="{areaheight}*0.04" layer="2">
+          <drawtext x="{areaheight}*0.5" width="50%" valign="center" font="{vdrSml}" fontsize="100%" color="{clrMenuTitleFg}" text="VDR - {tr(disc)} {usedpercent}% ({freegb} GB - {freetime} {tr(free)})" />
+        </area>
+    </discusage>
+
+    <devices>
+    </devices>
+
+    <systemload>
+    </systemload>
+
+    <menuitems x="1%" y="6%" orientation="vertical" width="98%" height="88%" align="center" numlistelements="25">
+        <listelement>
+            <area x="0" y="0" width="100%" height="100%" layer="2">
+                <fill condition="{current}" color="{clrMenuItemCurrentBg}" />
+                <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+                <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+                <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+                <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+            </area>
+            <area x="0" y="0" width="60%" height="100%" layer="3">
+                <drawtext condition="not{current}" x="4%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{number} {label}" />
+                <drawtext condition="{current}" x="4%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{number} {label}" />
+                <drawtext condition="{separator}" x="4%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemNonSelectable}" text="{number} {label}" />
+            </area>
+        </listelement>
+    </menuitems>
+
+    <scrollbar>
+        <area condition="lt({height},1000)" x="99%" y="4%" width="1%" height="92%" layer="2">
+            <fill color="{clrMenuScrollbarTotal}" />
+            <drawrectangle x="0" y="{areaheight} * {offset} / 1000" width="{areawidth}" height="{areaheight} * {height} / 1000 - 8" color="{clrMenuScrollbarShown}" />
+        </area>
+    </scrollbar>
+</menumain>
