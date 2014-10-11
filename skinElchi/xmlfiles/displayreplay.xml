@@ -5,7 +5,7 @@
     <background>
         <area x="0" y="86%" width="100%" height="4%" layer="1">
             <drawrectangle x="80%" y="0" width="20%" height="100%" color="{clrBackground}" />
-             <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+            <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
 
             <drawellipse x="{areawidth}*0.8-{areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrBackground}" quadrant="2"/>
             <drawrectangle x="{areawidth}*0.8-{areaheight}*0.5" y="{areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrBackground}"/>
@@ -29,6 +29,13 @@
     </background>
 
     <backgroundmodeonly>
+        <area x="80%" y="94%" width="20%" height="4%" layer="1">
+           <fill color="{clrBackground}" />
+           <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+           <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+           <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+           <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+         </area>
     </backgroundmodeonly>
 
     <datetime>
@@ -115,14 +122,6 @@
 
     <controliconsmodeonly>
         <area x="80%" y="94%" width="20%" height="4%" layer="1">
-           <fill color="{clrBackground}" />
-           <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
-           <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
-           <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
-           <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
-         </area>
-
-        <area x="80%" y="94%" width="20%" height="4%" layer="1">
           <drawimage name="frew" imagetype="icon" path="cfrew_off" x="10%" valign="center" width="14%" height="71%"/>
           <drawimage condition="{rewind}++not{pause}" imagetype="icon" path="cfrew_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
           <drawimage condition="{rewind1x}++not{pause}" imagetype="icon" path="cfrew1_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
@@ -150,6 +149,15 @@
     </controliconsmodeonly>
 
     <jump>
+       <area x="55%" y="94%" width="20%" height="4%" layer="1">
+           <fill color="{clrBackground}" />
+           <drawellipse x="0" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-2"/>
+           <drawellipse x="{areawidth} - {areaheight}*0.5" y="0" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-1"/>
+           <drawellipse x="0" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-3"/>
+           <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
+
+           <drawtext x="0" align="center" valign="center" font="{vdrSml}" fontsize="100%" color="{clrReplayCurrent}" text="{jump}" />
+       </area>
     </jump>
 
     <message>
