@@ -115,6 +115,10 @@
     </screenresolution>
 
     <channelgroup>
+      <!-- area from channel name -->
+      <area condition="not{channellogoexists}" x="0" y="81%" width="80%" height="4%" layer="2">
+        <drawtext x="{areaheight}*0.5" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrChannelNameFg}" text="{group}" />
+      </area>
     </channelgroup>
 
     <signalquality>
