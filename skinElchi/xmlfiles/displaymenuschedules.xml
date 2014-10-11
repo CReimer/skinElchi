@@ -19,7 +19,9 @@
                 <drawtext condition="lt({daynumeric},10)" x="{areaheight}*0.5" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{day} 0{daynumeric}" />
                 <drawtext condition="gt({daynumeric},9)" x="{areaheight}*0.5" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{day} {daynumeric}" />
                 <drawtext x="9%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{start}" />
-                <drawimage condition="{hasVPS}" imagetype="icon" path="Cvpssml_off" x="16%" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage name="vps" condition="{hasVPS}" imagetype="icon" path="Cvpssml_off" x="15%" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerpartitial}" imagetype="icon" path="Cclocksml_off" x="{posx(vps)}+{width(vps)}+{areaheight}*0.2" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerfull}" imagetype="icon" path="Cclock_off" x="{posx(vps)}+{width(vps)}+{areaheight}*0.1" valign="center" width="{areaheight}*0.722" height="92%" />
                 <drawtext name="title" x="20%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{title}" />
                 <drawtext condition="isset{shorttext}" x="{posx(title)} + {width(title)}" y="0" width="{areawidth}-{posx(title)}-{width(title)}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text=" ~ {shorttext}" />
                 <drawimage condition="{timerfull}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*5/10 - 10" y="10" width="{areaheight}*5/10" height="{areaheight}*5/10" />
@@ -30,7 +32,9 @@
                 <drawtext condition="lt({daynumeric},10)" x="{areaheight}*0.5" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{day} 0{daynumeric}" />
                 <drawtext condition="gt({daynumeric},9)" x="{areaheight}*0.5" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{day} {daynumeric}" />
                 <drawtext x="9%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{start}" />
-                <drawimage condition="{hasVPS}" imagetype="icon" path="Cvpssml_on" x="16%" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage name="vps" condition="{hasVPS}" imagetype="icon" path="Cvpssml_on" x="15%" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerpartitial}" imagetype="icon" path="Cclocksml_on" x="{posx(vps)}+{width(vps)}+{areaheight}*0.2" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerfull}" imagetype="icon" path="Cclock_on" x="{posx(vps)}+{width(vps)}+{areaheight}*0.1" valign="center" width="{areaheight}*0.722" height="92%" />
                 <drawtext name="title" x="20%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
                 <drawtext condition="isset{shorttext}" x="{posx(title)} + {width(title)}" y="0" width="{areawidth}-{posx(title)}-{width(title)}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text=" ~ {shorttext}" />
                 <drawimage condition="{timerfull}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*5/10 - 10" y="10" width="{areaheight}*5/10" height="{areaheight}*5/10" />
@@ -40,8 +44,10 @@
             <area condition="not{separator}++{whatsonnow}++not{current}" x="0" width="100%" layer="3">
                 <drawtext x="{areaheight}*0.5" y="0" width="14%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{channelname}" />
                 <drawtext x="15%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{start}" />
-                <drawimage condition="{hasVPS}" imagetype="icon" path="Cvpssml_off" x="27%" valign="center" width="{areaheight}*0.722" height="92%" />
-                <drawtext name="title" x="30%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{title}" />
+                <drawimage name="vps" condition="{hasVPS}" imagetype="icon" path="Cvpssml_off" x="27%" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerpartitial}" imagetype="icon" path="Cclocksml_off" x="{posx(vps)}+{width(vps)}+{areaheight}*0.2" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerfull}" imagetype="icon" path="Cclock_off" x="{posx(vps)}+{width(vps)}+{areaheight}*0.1" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawtext name="title" x="32%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{title}" />
                 <drawtext condition="isset{shorttext}" x="{posx(title)} + {width(title)}" y="0" width="{areawidth}-{posx(title)}-{width(title)}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text=" ~ {shorttext}" />
                 <drawimage condition="{timerfull}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*5/10 - 10" y="10" width="{areaheight}*5/10" height="{areaheight}*5/10" />
                 <drawimage condition="{timerpartitial}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*3/10 - 10" y="10" width="{areaheight}*3/10" height="{areaheight}*3/10" />
@@ -54,8 +60,10 @@
             <area condition="not{separator}++{whatsonnow}++{current}" x="0" width="100%" layer="3">
                 <drawtext x="{areaheight}*0.5" y="0" width="14%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{channelname}" />
                 <drawtext x="15%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{start}" />
-                <drawimage condition="{hasVPS}" imagetype="icon" path="Cvpssml_on" x="27%" valign="center" width="{areaheight}*0.722" height="92%" />
-                <drawtext name="title" x="30%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
+                <drawimage name="vps" condition="{hasVPS}" imagetype="icon" path="Cvpssml_on" x="27%" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerpartitial}" imagetype="icon" path="Cclocksml_on" x="{posx(vps)}+{width(vps)}+{areaheight}*0.2" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerfull}" imagetype="icon" path="Cclock_on" x="{posx(vps)}+{width(vps)}+{areaheight}*0.1" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawtext name="title" x="32%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
                 <drawtext condition="isset{shorttext}" x="{posx(title)} + {width(title)}" y="0" width="{areawidth}-{posx(title)}-{width(title)}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text=" ~ {shorttext}" />
                 <drawimage condition="{timerfull}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*5/10 - 10" y="10" width="{areaheight}*5/10" height="{areaheight}*5/10" />
                 <drawimage condition="{timerpartitial}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*3/10 - 10" y="10" width="{areaheight}*3/10" height="{areaheight}*3/10" />
@@ -73,8 +81,10 @@
             <area condition="not{separator}++{whatsonnext}++not{current}" x="0" width="100%" layer="3">
                 <drawtext x="{areaheight}*0.5" y="0" width="14%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{channelname}" />
                 <drawtext x="15%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{start}" />
-                <drawimage condition="{hasVPS}" imagetype="icon" path="Cvpssml_off" x="27%" valign="center" width="{areaheight}*0.722" height="92%" />
-                <drawtext name="title" x="30%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{title}" />
+                <drawimage name="vps" condition="{hasVPS}" imagetype="icon" path="Cvpssml_off" x="27%" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerpartitial}" imagetype="icon" path="Cclocksml_off" x="{posx(vps)}+{width(vps)}+{areaheight}*0.2" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerfull}" imagetype="icon" path="Cclock_off" x="{posx(vps)}+{width(vps)}+{areaheight}*0.1" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawtext name="title" x="32%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{title}" />
                 <drawtext condition="isset{shorttext}" x="{posx(title)} + {width(title)}" y="0" width="{areawidth}-{posx(title)}-{width(title)}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text=" ~ {shorttext}" />
                 <drawimage condition="{timerfull}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*5/10 - 10" y="10" width="{areaheight}*5/10" height="{areaheight}*5/10" />
                 <drawimage condition="{timerpartitial}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*3/10 - 10" y="10" width="{areaheight}*3/10" height="{areaheight}*3/10" />
@@ -83,8 +93,10 @@
             <area condition="not{separator}++{whatsonnext}++{current}" x="0" width="100%" layer="3">
                 <drawtext x="{areaheight}*0.5" y="0" width="14%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{channelname}" />
                 <drawtext x="15%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{start}" />
-                <drawimage condition="{hasVPS}" imagetype="icon" path="Cvpssml_off" x="27%" valign="center" width="{areaheight}*0.722" height="92%" />
-                <drawtext name="title" x="30%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
+                <drawimage name="vps" condition="{hasVPS}" imagetype="icon" path="Cvpssml_on" x="27%" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerpartitial}" imagetype="icon" path="Cclocksml_on" x="{posx(vps)}+{width(vps)}+{areaheight}*0.2" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawimage condition="{timerfull}" imagetype="icon" path="Cclock_on" x="{posx(vps)}+{width(vps)}+{areaheight}*0.1" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawtext name="title" x="32%" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
                 <drawtext condition="isset{shorttext}" x="{posx(title)} + {width(title)}" y="0" width="{areawidth}-{posx(title)}-{width(title)}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text=" ~ {shorttext}" />
                 <drawimage condition="{timerfull}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*5/10 - 10" y="10" width="{areaheight}*5/10" height="{areaheight}*5/10" />
                 <drawimage condition="{timerpartitial}" imagetype="icon" path="ico_activetimer" x="{areawidth} - {areaheight}*3/10 - 10" y="10" width="{areaheight}*3/10" height="{areaheight}*3/10" />
