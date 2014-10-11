@@ -153,7 +153,7 @@
     </jump>
 
     <message>
-        <area x="{areawidth}*0.1" y="{areaheight}-{areaheight}*0.04" width="{areawidth}-{areawidth}*0.1" height="{areaheight}*0.04" layer="4">
+        <area x="0" y="{areaheight}-{areaheight}*0.04" width="{areawidth}" height="{areaheight}*0.04" layer="4">
             <drawrectangle condition="{status}" x="0" y="0" width="100%" height="100%" color="{clrMessageStatusBg}" />
             <drawtext condition="{status}" align="center" valign="center" width="100%" font="{vdrOsd}" fontsize="100%" color="{clrMessageStatusFg}" text="{text}" />
             <drawrectangle condition="{info}" x="0" y="0" width="100%" height="100%" color="{clrMessageInfoBg}" />

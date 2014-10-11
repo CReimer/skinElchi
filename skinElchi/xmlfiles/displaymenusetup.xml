@@ -10,10 +10,26 @@
                 <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
             </area>
 
-            <area x="0" y="0" width="100%" layer="3">
-                <drawtext condition="not{current}" x="4%" valign="center" font="{bold}" fontsize="100%" color="{clrMenuItemSelectable}" text="{number} {label}" />
-                <drawtext condition="{current}" x="4%" valign="center" font="{bold}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{number} {label}" />
-                <drawtext condition="{separator}" x="4%" valign="center" font="{bold}" fontsize="100%" color="{clrMenuItemNonSelectable}" text="{number} {label}" />
+            <area condition="not{current}++not{separator}" x="0" width="100%" layer="3">
+                <drawtext name="spacer1" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="0" />
+                <drawtext name="spacer2" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00" />
+                <drawtext condition="lt({number},10)++isset({number})" x="{posx(spacer1)}+{width(spacer1)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{number}  {label}" />
+                <drawtext condition="gt({number},9)++isset({number})" x="{posx(spacer1)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{number}  {label}" />
+                <drawtext x="{posx(spacer2)}+{width(spacer2)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="  {label}" />
+            </area>
+            <area condition="{current}" x="0" width="100%" layer="3">
+                <drawtext name="spacer1" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="0" />
+                <drawtext name="spacer2" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00" />
+                <drawtext condition="lt({number},10)++isset({number})" x="{posx(spacer1)}+{width(spacer1)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{number}  {label}" />
+                <drawtext condition="gt({number},9)++isset({number})" x="{posx(spacer1)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{number}  {label}" />
+                <drawtext x="{posx(spacer2)}+{width(spacer2)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="  {label}" />
+            </area>
+            <area condition="{separator}" x="0" width="100%" layer="3">
+                <drawtext name="spacer1" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="0" />
+                <drawtext name="spacer2" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00" />
+                <drawtext condition="lt({number},10)++isset({number})" x="{posx(spacer1)}+{width(spacer1)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemNonSelectable}" text="{number}  {label}" />
+                <drawtext condition="gt({number},9)++isset({number})" x="{posx(spacer1)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemNonSelectable}" text="{number}  {label}" />
+                <drawtext x="{posx(spacer2)}+{width(spacer2)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemNonSelectable}" text="  {label}" />
             </area>
         </listelement>
     </menuitems>
