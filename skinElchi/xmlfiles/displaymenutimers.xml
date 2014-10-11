@@ -16,24 +16,24 @@
             </area>
             <!-- datetime and icons -->
             <area condition="not{current}" x="0" width="100%" layer="3">
-                <drawtext x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{channelnumber}" />
-                <drawtext x="9%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{dayname} {day}" />
-                <drawtext x="20%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{timerstart}" />
-                <drawtext x="27%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{timerstop}" />
-                <drawtext x="34%" width="{areawidth}-{areawidth}*0.34-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{title}" />
-                <drawimage condition="{flagactive}" imagetype="icon" path="ico_timer_active" x="{areawidth} - 0.5*{areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
-                <drawimage condition="not{flagactive}" imagetype="icon" path="ico_timer_inactive" x="{areawidth} - 0.5*{areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
-                <drawimage condition="{flagrecording}" name="active" imagetype="icon" path="ico_timer_recording" x="{areawidth} - {areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
+                <drawtext name="spacer_number" x="0" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00" />
+                <drawtext name="spacer_time" x="0" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00:00" />
+                <drawtext name="spacer_date" x="0" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="Sam 88" />
+                <drawtext name="number" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{channelnumber}" />
+                <drawtext name="day" x="{posx(number)}+{width(spacer_number)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{dayname} {day}" />
+                <drawtext name="start" x="{posx(day)}+{width(spacer_date)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{timerstart}" />
+                <drawtext name="stop" x="{posx(start)}+{width(spacer_time)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{timerstop}" />
+                <drawtext x="{posx(stop)}+{width(spacer_time)}+{areaheight}" width="{areawidth}-{areawidth}*0.34-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{title}" />
             </area>
             <area condition="{current}" x="0" width="100%" layer="3">
-                <drawtext x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{channelnumber}" />
-                <drawtext x="9%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{dayname} {day}" />
-                <drawtext x="20%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{timerstart}" />
-                <drawtext x="27%" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{timerstop}" />
-                <drawtext x="34%" width="{areawidth}-{areawidth}*0.34-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
-                <drawimage condition="{flagactive}" imagetype="icon" path="ico_timer_active" x="{areawidth} - 0.5*{areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
-                <drawimage condition="not{flagactive}" imagetype="icon" path="ico_timer_inactive" x="{areawidth} - 0.5*{areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
-                <drawimage condition="{flagrecording}" name="active" imagetype="icon" path="ico_timer_recording" x="{areawidth} - {areaheight} - 20" y="0" width="0.5*{areaheight}" height="0.5*{areaheight}" />
+                <drawtext name="spacer_number" x="0" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00" />
+                <drawtext name="spacer_time" x="0" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00:00" />
+                <drawtext name="spacer_date" x="0" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="Sam 88" />
+                <drawtext name="number" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{channelnumber}" />
+                <drawtext name="day" x="{posx(number)}+{width(spacer_number)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{dayname} {day}" />
+                <drawtext name="start" x="{posx(day)}+{width(spacer_date)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{timerstart}" />
+                <drawtext name="stop" x="{posx(start)}+{width(spacer_time)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{timerstop}" />
+                <drawtext x="{posx(stop)}+{width(spacer_time)}+{areaheight}" width="{areawidth}-{areawidth}*0.34-{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
             </area>
         </listelement>
     </menuitems>
