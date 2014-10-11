@@ -37,7 +37,8 @@
                 <drawellipse x="{areawidth} - {areaheight}*0.5" y="{areaheight} - {areaheight}*0.5" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrTransparent}" quadrant="-4"/>
             </area>
             <area x="0%" width="100%" layer="2">
-                <drawtext x="{areaheight}*0.5" width="{areawidth}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrWhite}" text="{title}" />
+                <drawtext condition="{current}" x="{areaheight}*0.5" width="{areawidth}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
+                <drawtext condition="not{current}" x="{areaheight}*0.5" width="{areawidth}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{title}" />
             </area>
         </listelement>
     </menuitems>
