@@ -2,7 +2,6 @@
     <detailheader>
       <area x="1%" y="6%" width="99%" height="16%" layer="2">
         <drawtext name="date" x="0" y="0" fontsize="25%" font="{vdrOsd}" color="{clrMenuEventTime}" text="{date} {time}"/>
-        <drawrectangle x="0" y="{posy(date)} + {height(date)}" width="{width(vps)}" height="25%" color="{clrMenuEventVpsBg}" />
         <drawtext name="title" x="0" y="{posy(date)} + {height(date)}*2" fontsize="25%" font="{vdrOsd}" color="{clrMenuEventTitle}" text="{name}"/>
         <drawtext x="0" y="{posy(title)} + {height(title)}" fontsize="25%" font="{vdrSml}" color="{clrMenuEventShortText}" text="{shorttext}"/>
       </area>

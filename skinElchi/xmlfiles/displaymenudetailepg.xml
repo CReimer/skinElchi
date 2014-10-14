@@ -3,8 +3,8 @@
     <detailheader>
       <area x="1%" y="6%" width="99%" height="16%" layer="2">
         <drawtext name="date" x="0" y="0" fontsize="25%" font="{vdrOsd}" color="{clrMenuEventTime}" text="{day} {date} {start} - {stop}"/>
-        <drawrectangle x="0" y="{posy(date)} + {height(date)}" width="{width(vps)}" height="25%" color="{clrMenuEventVpsBg}" />
-        <drawtext name="vps" x="0" y="{posy(date)} + {height(date)}" fontsize="25%" font="{vdrSml}" color="{clrMenuEventVpsFg}" text="VPS: "/>
+        <drawrectangle condition= "isset{vps}" x="0" y="{posy(date)} + {height(date)}" width="{width(vps_text)}" height="25%" color="{clrMenuEventVpsBg}" />
+        <drawtext condition= "isset{vps}" name="vps_text" x="0" y="{posy(date)} + {height(date)}" fontsize="25%" font="{vdrSml}" color="{clrMenuEventVpsFg}" text=" VPS: {vps} "/>
         <drawtext name="title" x="0" y="{posy(vps)} + {height(vps)}" fontsize="25%" font="{vdrOsd}" color="{clrMenuEventTitle}" text="{title}"/>
         <drawtext x="0" y="{posy(title)} + {height(title)}" fontsize="25%" font="{vdrSml}" color="{clrMenuEventShortText}" text="{shorttext}"/>
       </area>
