@@ -34,7 +34,6 @@
             </area>
 
             <area condition="{current}++not{folder}" x="0" width="100%" layer="3">
-                <drawtext name="spacerfull" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00.00.0000" />
                 <drawtext name="spacer" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00." />
 
                 <drawtext condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="0{daynumeric}." />
@@ -53,7 +52,6 @@
             <area condition="not{current}++{folder}" x="0" width="100%" layer="3">
                 <drawtext name="spacertime" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00:00" />
                 <drawtext name="spacerduration" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="0:00" />
-                <drawtext name="spacerfull" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00.00.0000" />
                 <drawtext name="spacer" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00." />
 
                 <drawtext condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="0{daynumeric}." />
@@ -62,16 +60,15 @@
                 <drawtext condition="gt({month},9)" x="{posx(spacer)}+{width(spacer)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{month}." />
                 <drawtext name="year" x="{posx(spacer)}+{width(spacer)}*2" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{year}" />
 
-                <drawtext x="{posx(year)}+{width(year)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{numrecordingsfolder}" />
-                <drawtext name="new" x="{posx(spacerfull)}+{width(spacerfull)}+{width(spacertime)}+{areaheight}*2" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{newrecordingsfolder}" />
-                <drawimage name="folder_icon" imagetype="icon" path="Cfolder_off" x="{posx(new)}+{width(spacerduration)}+{areaheight}*1.25+{areaheight}*0.722" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawtext name="numrecordings" x="{posx(year)}+{width(year)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{numrecordingsfolder}" />
+                <drawtext name="newrecordings" x="{posx(numrecordings)}+{width(spacertime)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{newrecordingsfolder}" />
+                <drawimage name="folder_icon" imagetype="icon" path="Cfolder_off" x="{posx(newrecordings)}+{width(spacerduration)}+{areaheight}*1.25+{areaheight}*0.722" valign="center" width="{areaheight}*0.722" height="92%" />
                 <drawtext x="{posx(folder_icon)}+{width(folder_icon)}+{areaheight}*0.25" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemSelectable}" text="{name}" />
             </area>
 
             <area condition="{current}++{folder}" x="0" width="100%" layer="3">
                 <drawtext name="spacertime" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00:00" />
                 <drawtext name="spacerduration" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="0:00" />
-                <drawtext name="spacerfull" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00.00.0000" />
                 <drawtext name="spacer" condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrTransparent}" text="00." />
 
                 <drawtext condition="lt({daynumeric},10)" x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="0{daynumeric}." />
@@ -80,9 +77,9 @@
                 <drawtext condition="gt({month},9)" x="{posx(spacer)}+{width(spacer)}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{month}." />
                 <drawtext name="year" x="{posx(spacer)}+{width(spacer)}*2" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{year}" />
 
-                <drawtext x="{posx(year)}+{width(year)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{numrecordingsfolder}" />
-                <drawtext name="new" x="{posx(spacerfull)}+{width(spacerfull)}+{width(spacertime)}+{areaheight}*2" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{newrecordingsfolder}" />
-                <drawimage name="folder_icon" imagetype="icon" path="Cfolder_on" x="{posx(new)}+{width(spacerduration)}+{areaheight}*1.25+{areaheight}*0.722" valign="center" width="{areaheight}*0.722" height="92%" />
+                <drawtext name="numrecordings" x="{posx(year)}+{width(year)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{numrecordingsfolder}" />
+                <drawtext name="newrecordings" x="{posx(numrecordings)}+{width(spacertime)}+{areaheight}" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{newrecordingsfolder}" />
+                <drawimage name="folder_icon" imagetype="icon" path="Cfolder_on" x="{posx(newrecordings)}+{width(spacerduration)}+{areaheight}*1.25+{areaheight}*0.722" valign="center" width="{areaheight}*0.722" height="92%" />
                 <drawtext x="{posx(folder_icon)}+{width(folder_icon)}+{areaheight}*0.25" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{name}" />
             </area>
         </listelement>
