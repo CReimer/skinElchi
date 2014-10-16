@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE globals SYSTEM "../../../../dtd/globals.dtd" [
+<!ENTITY translations SYSTEM "../../xmlfiles/translations.xml">
+]>
+<globals>
+    <colors>
+        <color name="clrBackground">AA220808</color>
+        <color name="clrButtonBlueBg">CC000099</color>
+        <color name="clrButtonBlueFg">FFEEEEFF</color>
+        <color name="clrButtonGreenBg">CC118811</color>
+        <color name="clrButtonGreenFg">FFFFFFFF</color>
+        <color name="clrButtonRedBg">CC880000</color>
+        <color name="clrButtonRedFg">FFFFFFFF</color>
+        <color name="clrButtonYellowBg">CCAAAA11</color>
+        <color name="clrButtonYellowFg">FF000000</color>
+        <color name="clrChannelDateBg">DD660000</color>
+        <color name="clrChannelDateFg">FFEEBBBB</color>
+        <color name="clrChannelEpgShortText">FFCC4444</color>
+        <color name="clrChannelEpgTimeBg">EE770000</color>
+        <color name="clrChannelEpgTimeFg">FFDDDDDD</color>
+        <color name="clrChannelEpgTitleBg">CC330000</color>
+        <color name="clrChannelEpgTitleFg">FF888888</color>
+        <color name="clrChannelNameBg">EE333333</color>
+        <color name="clrChannelNameFg">FFEE3333</color>
+        <color name="clrChannelSymbolOff">99110000</color>
+        <color name="clrChannelSymbolOn">FFEE1111</color>
+        <color name="clrChannelTimebarRest">88110000</color>
+        <color name="clrChannelTimebarSeen">CCBBBB11</color>
+        <color name="clrMenuDate">FFCC9999</color>
+        <color name="clrMenuEventDescription">FF999999</color>
+        <color name="clrMenuEventShortText">FF777777</color>
+        <color name="clrMenuEventTime">FFCCB0B0</color>
+        <color name="clrMenuEventTitle">FFEE3333</color>
+        <color name="clrMenuEventVpsBg">EE230000</color>
+        <color name="clrMenuEventVpsFg">FFFF0000</color>
+        <color name="clrMenuItemCurrentBg">DD110000</color>
+        <color name="clrMenuItemCurrentFg">FFFF3333</color>
+        <color name="clrMenuItemNonSelectable">FF888888</color>
+        <color name="clrMenuItemSelectable">FFBBAAAA</color>
+        <color name="clrMenuScrollbarShown">EE660000</color>
+        <color name="clrMenuScrollbarTotal">88111111</color>
+        <color name="clrMenuText">FFEE2233</color>
+        <color name="clrMenuTitleBg">EE771111</color>
+        <color name="clrMenuTitleFg">FFEEDDDD</color>
+        <color name="clrMessageErrorBg">BB220000</color>
+        <color name="clrMessageErrorFg">FFCC3333</color>
+        <color name="clrMessageInfoBg">BB220000</color>
+        <color name="clrMessageInfoFg">FF218822</color>
+        <color name="clrMessageStatusBg">BB220000</color>
+        <color name="clrMessageStatusFg">FF5555FF</color>
+        <color name="clrMessageWarningBg">BB220000</color>
+        <color name="clrMessageWarningFg">FFBBAA22</color>
+        <color name="clrReplayCurrent">FF998888</color>
+        <color name="clrReplayModeJump">AAFCFCFC</color>
+        <color name="clrReplayProgressCurrent">FFFF1100</color>
+        <color name="clrReplayProgressMark">FF882222</color>
+        <color name="clrReplayProgressRest">BBEEEEEE</color>
+        <color name="clrReplayProgressSeen">BB663333</color>
+        <color name="clrReplayProgressSelected">DD000000</color>
+        <color name="clrReplaySymbolOff">99110000</color>
+        <color name="clrReplaySymbolOn">FFFF1111</color>
+        <color name="clrReplayTitleBg">CCBBBBBB</color>
+        <color name="clrReplayTitleFg">FFAA0000</color>
+        <color name="clrReplayTotal">FFBB2222</color>
+        <color name="clrSymbolRecBg">FFBB1111</color>
+        <color name="clrSymbolRecFg">FF000000</color>
+        <color name="clrTransparent">00000000</color>
+        <color name="clrVolumeBarLower">AA220000</color>
+        <color name="clrVolumeBarUpper">CCBBBB11</color>
+        <color name="clrVolumePrompt">AAEECCCC</color>
+        <color name="clrVolumeSymbolMuteBg">AAFCFCFC</color>
+        <color name="clrVolumeSymbolMuteFg">AACC1111</color>
+        <color name="clrVolumeSymbolVolumeBg">CC221100</color>
+        <color name="clrVolumeSymbolVolumeFg">CCBBBB55</color>
+    </colors>
+
+    <variables>
+    </variables>
+
+    &translations;
+
+    <fonts>
+    </fonts>
+
+  </globals>

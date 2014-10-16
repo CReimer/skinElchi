@@ -78,8 +78,8 @@
       <!-- width: 14% of 20% 
            x: 80% + 2% of 20%-->
       <area x="{areawidth}*0.8+{areawidth}*0.2*0.02" y="81%" width="{areawidth}*0.14*0.2" height="4%" layer="2">
-        <drawimage name="vps" imagetype="icon" path="Cvps_off" x="0" valign="center" width="100%" height="71%"/>
-        <drawimage condition="{hasVPS}" imagetype="icon" path="Cvps_on" x="{posx(vps)}" valign="center" width="{width(vps)}" height="{height(vps)}"/>
+        <drawimage condition="not{hasVPS}" name="vps" imagetype="icon" path="channelVps_off" x="0" valign="center" width="100%" height="71%"/>
+        <drawimage condition="{hasVPS}" imagetype="icon" path="channelVps_on" x="{posx(vps)}" valign="center" width="{width(vps)}" height="{height(vps)}"/>
       </area>
     </epginfo>
 
@@ -93,17 +93,17 @@
     <statusinfo>
       <area x="80%" y="81%" width="20%" height="4%" layer="2">
           <!-- x: 14% from hasVPS symbol + 2% offset*2 = 18% -->
-          <drawimage name="vt" imagetype="icon" path="Ctxt_off" x="18%" valign="center" width="14%" height="71%"/>
-          <drawimage name="radio" imagetype="icon" path="Caudio_off" x="{posx(vt)} + {width(vt)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
-          <drawimage name="dolbydigital" imagetype="icon" path="Cdolbydigital_off" x="{posx(radio)} + {width(radio)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
-          <drawimage name="encrypted" imagetype="icon" path="Cencrypted_off" x="{posx(dolbydigital)} + {width(dolbydigital)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
-          <drawimage name="rec" imagetype="icon" path="Crec_off" x="{posx(encrypted)} + {width(encrypted)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+          <drawimage condition="not{hasVT}" name="vt" imagetype="icon" path="channelTeletext_off" x="18%" valign="center" width="14%" height="71%"/>
+          <drawimage condition="not{isRadio}" name="radio" imagetype="icon" path="channelAudio_off" x="{posx(vt)} + {width(vt)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+          <drawimage condition="not{isDolby}" name="dolbydigital" imagetype="icon" path="channelDolbyDigital_off" x="{posx(radio)} + {width(radio)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+          <drawimage condition="not{isEncrypted}" name="encrypted" imagetype="icon" path="channelEncrypted_off" x="{posx(dolbydigital)} + {width(dolbydigital)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+          <drawimage condition="not{isRecording}" name="rec" imagetype="icon" path="symbolRec_off" x="{posx(encrypted)} + {width(encrypted)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
 
-          <drawimage condition="{hasVT}" imagetype="icon" path="Ctxt_on" x="{posx(vt)}" valign="center" width="{width(vt)}" height="{height(vt)}"/>
-          <drawimage condition="{isRadio}" imagetype="icon" path="Caudio_on" x="{posx(radio)}" valign="center" width="{width(radio)}" height="{height(radio)}"/>
-          <drawimage condition="{isDolby}" imagetype="icon" path="Cdolbydigital_on" x="{posx(dolbydigital)}" valign="center" width="{width(dolbydigital)}" height="{height(dolbydigital)}"/>
-          <drawimage condition="{isEncrypted}" imagetype="icon" path="Cencrypted_on" x="{posx(encrypted)}" valign="center" width="{width(encrypted)}" height="{height(encrypted)}"/>
-          <drawimage condition="{isRecording}" imagetype="icon" path="Crec_on" x="{posx(rec)}" valign="center" width="{width(rec)}" height="{height(rec)}"/>
+          <drawimage condition="{hasVT}" imagetype="icon" path="channelTeletext_on" x="{posx(vt)}" valign="center" width="{width(vt)}" height="{height(vt)}"/>
+          <drawimage condition="{isRadio}" imagetype="icon" path="channelAudio_on" x="{posx(radio)}" valign="center" width="{width(radio)}" height="{height(radio)}"/>
+          <drawimage condition="{isDolby}" imagetype="icon" path="channelDolbyDigital_on" x="{posx(dolbydigital)}" valign="center" width="{width(dolbydigital)}" height="{height(dolbydigital)}"/>
+          <drawimage condition="{isEncrypted}" imagetype="icon" path="channelEncrypted_on" x="{posx(encrypted)}" valign="center" width="{width(encrypted)}" height="{height(encrypted)}"/>
+          <drawimage condition="{isRecording}" imagetype="icon" path="symbolRec_on" x="{posx(rec)}" valign="center" width="{width(rec)}" height="{height(rec)}"/>
       </area>
       <!-- x: 32% (background) -->
       <area x="32%" y="{areaheight}*0.765" width="{areawidth}-{areawidth}*0.32" height="4%" layer="1">

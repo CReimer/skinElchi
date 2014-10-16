@@ -17,7 +17,7 @@
             <drawtext x="10" valign="center" font="{vdrSml}" fontsize="100%" color="{clrVolumePrompt}" text="{tr(volume)}" />
         </area>
         <area x="{areaheight}*0.02" y="96%" width="{areawidth}-{areaheight}*0.02" height="4%" layer="3">
-            <drawrectangle x="{areaheight}*0.5" y="0" valign="center" width="{volume}/{maxvolume}*{areawidth}-{areaheight}" height="80%" color="{clrVolumeBarUpper}" />
+            <drawrectangle condition="not{mute}" x="{areaheight}*0.5" y="0" valign="center" width="{volume}/{maxvolume}*{areawidth}-{areaheight}" height="80%" color="{clrVolumeBarUpper}" />
         </area>
     </volume>
 </displayvolume>

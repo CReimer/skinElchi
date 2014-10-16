@@ -95,56 +95,56 @@
     <controlicons>
         <area x="80%" y="96%" width="20%" height="4%" layer="1">
           <drawimage name="frew" imagetype="icon" path="cfrew_off" x="10%" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{rewind}++not{pause}" imagetype="icon" path="cfrew_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
-          <drawimage condition="{rewind1x}++not{pause}" imagetype="icon" path="cfrew1_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
-          <drawimage condition="{rewind2x}++not{pause}" imagetype="icon" path="cfrew2_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
-          <drawimage condition="{rewind3x}++not{pause}" imagetype="icon" path="cfrew3_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind}++not{pause}" imagetype="icon" path="replayREW_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind1x}++not{pause}" imagetype="icon" path="replayREW1_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind2x}++not{pause}" imagetype="icon" path="replayREW2_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind3x}++not{pause}" imagetype="icon" path="replayREW3_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
 
-          <drawimage name="srew" imagetype="icon" path="csrew_off" x="{posx(frew)} + {width(frew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{rewind}++{pause}" imagetype="icon" path="csrew_on" x="{posx(srew)}" valign="center" width="{width(srew)}" height="{height(srew)}"/>
+          <drawimage name="srew" imagetype="icon" path="replaySlowREW_off" x="{posx(frew)} + {width(frew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+          <drawimage condition="{rewind}++{pause}" imagetype="icon" path="replaySlowREW_on" x="{posx(srew)}" valign="center" width="{width(srew)}" height="{height(srew)}"/>
 
-          <drawimage condition="not{play}" name="play" imagetype="icon" path="Cplay_off" x="{posx(srew)} + {width(srew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{play}" imagetype="icon" path="Cplay_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
-          <drawimage condition="{pause}++{forward}" imagetype="icon" path="Cpause_off" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
-          <drawimage condition="{pause}++{rewind}" imagetype="icon" path="Cpause_off" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
-          <drawimage condition="{pause}++not{rewind}++not{forward}" imagetype="icon" path="Cpause_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="not{play}" name="play" imagetype="icon" path="replayPlay_off" x="{posx(srew)} + {width(srew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+          <drawimage condition="{play}" imagetype="icon" path="replayPlay_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="{pause}++{forward}" imagetype="icon" path="replayPause_off" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="{pause}++{rewind}" imagetype="icon" path="replayPause_off" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="{pause}++not{rewind}++not{forward}" imagetype="icon" path="replayPause_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
 
-          <drawimage name="sfwd" imagetype="icon" path="csfwd_off" x="{posx(play)} + {width(play)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{forward}++{pause}" imagetype="icon" path="csfwd_on" x="{posx(sfwd)}" valign="center" width="{width(sfwd)}" height="{height(sfwd)}"/>
+          <drawimage name="sfwd" imagetype="icon" path="replaySlowFWD_off" x="{posx(play)} + {width(play)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+          <drawimage condition="{forward}++{pause}" imagetype="icon" path="replaySlowFWD_on" x="{posx(sfwd)}" valign="center" width="{width(sfwd)}" height="{height(sfwd)}"/>
 
-          <drawimage name="ffwd" imagetype="icon" path="cffwd_off" x="{posx(sfwd)} + {width(sfwd)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{forward}++not{pause}" imagetype="icon" path="cffwd_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
-          <drawimage condition="{forward1x}++not{pause}" imagetype="icon" path="cffwd1_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
-          <drawimage condition="{forward2x}++not{pause}" imagetype="icon" path="cffwd2_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
-          <drawimage condition="{forward3x}++not{pause}" imagetype="icon" path="cffwd3_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage name="ffwd" imagetype="icon" path="replayFWD_off" x="{posx(sfwd)} + {width(sfwd)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+          <drawimage condition="{forward}++not{pause}" imagetype="icon" path="replayFWD_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage condition="{forward1x}++not{pause}" imagetype="icon" path="replayFFWD1_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage condition="{forward2x}++not{pause}" imagetype="icon" path="replayFFWD2_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage condition="{forward3x}++not{pause}" imagetype="icon" path="replayFFWD3_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
         </area>
     </controlicons>
 
     <controliconsmodeonly>
         <area x="80%" y="96%" width="20%" height="4%" layer="1">
           <drawimage name="frew" imagetype="icon" path="cfrew_off" x="10%" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{rewind}++not{pause}" imagetype="icon" path="cfrew_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
-          <drawimage condition="{rewind1x}++not{pause}" imagetype="icon" path="cfrew1_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
-          <drawimage condition="{rewind2x}++not{pause}" imagetype="icon" path="cfrew2_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
-          <drawimage condition="{rewind3x}++not{pause}" imagetype="icon" path="cfrew3_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind}++not{pause}" imagetype="icon" path="replayREW_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind1x}++not{pause}" imagetype="icon" path="replayREW1_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind2x}++not{pause}" imagetype="icon" path="replayREW2_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
+          <drawimage condition="{rewind3x}++not{pause}" imagetype="icon" path="replayREW3_on" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
 
-          <drawimage name="srew" imagetype="icon" path="csrew_off" x="{posx(frew)} + {width(frew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{rewind}++{pause}" imagetype="icon" path="csrew_on" x="{posx(srew)}" valign="center" width="{width(srew)}" height="{height(srew)}"/>
+          <drawimage name="srew" imagetype="icon" path="replaySlowREW_off" x="{posx(frew)} + {width(frew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+          <drawimage condition="{rewind}++{pause}" imagetype="icon" path="replaySlowREW_on" x="{posx(srew)}" valign="center" width="{width(srew)}" height="{height(srew)}"/>
 
-          <drawimage condition="not{play}" name="play" imagetype="icon" path="Cplay_off" x="{posx(srew)} + {width(srew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{play}" imagetype="icon" path="Cplay_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
-          <drawimage condition="{pause}++{forward}" imagetype="icon" path="Cpause_off" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
-          <drawimage condition="{pause}++{rewind}" imagetype="icon" path="Cpause_off" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
-          <drawimage condition="{pause}++not{rewind}++not{forward}" imagetype="icon" path="Cpause_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="not{play}" name="play" imagetype="icon" path="replayPlay_off" x="{posx(srew)} + {width(srew)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+          <drawimage condition="{play}" imagetype="icon" path="replayPlay_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="{pause}++{forward}" imagetype="icon" path="replayPause_off" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="{pause}++{rewind}" imagetype="icon" path="replayPause_off" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
+          <drawimage condition="{pause}++not{rewind}++not{forward}" imagetype="icon" path="replayPause_on" x="{posx(play)}" valign="center" width="{width(play)}" height="{height(play)}"/>
 
-          <drawimage name="sfwd" imagetype="icon" path="csfwd_off" x="{posx(play)} + {width(play)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{forward}++{pause}" imagetype="icon" path="csfwd_on" x="{posx(sfwd)}" valign="center" width="{width(sfwd)}" height="{height(sfwd)}"/>
+          <drawimage name="sfwd" imagetype="icon" path="replaySlowFWD_off" x="{posx(play)} + {width(play)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+          <drawimage condition="{forward}++{pause}" imagetype="icon" path="replaySlowFWD_on" x="{posx(sfwd)}" valign="center" width="{width(sfwd)}" height="{height(sfwd)}"/>
 
-          <drawimage name="ffwd" imagetype="icon" path="cffwd_off" x="{posx(sfwd)} + {width(sfwd)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
-          <drawimage condition="{forward}++not{pause}" imagetype="icon" path="cffwd_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
-          <drawimage condition="{forward1x}++not{pause}" imagetype="icon" path="cffwd1_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
-          <drawimage condition="{forward2x}++not{pause}" imagetype="icon" path="cffwd2_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
-          <drawimage condition="{forward3x}++not{pause}" imagetype="icon" path="cffwd3_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage name="ffwd" imagetype="icon" path="replayFWD_off" x="{posx(sfwd)} + {width(sfwd)} + {areawidth} * 0.04" valign="center" width="14%" height="71%"/>
+          <drawimage condition="{forward}++not{pause}" imagetype="icon" path="replayFWD_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage condition="{forward1x}++not{pause}" imagetype="icon" path="replayFFWD1_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage condition="{forward2x}++not{pause}" imagetype="icon" path="replayFFWD2_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
+          <drawimage condition="{forward3x}++not{pause}" imagetype="icon" path="replayFFWD3_on" x="{posx(ffwd)}" valign="center" width="{width(ffwd)}" height="{height(ffwd)}"/>
         </area>
     </controliconsmodeonly>
 

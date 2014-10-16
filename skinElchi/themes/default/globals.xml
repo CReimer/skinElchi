@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE globals SYSTEM "../../../../dtd/globals.dtd">
-
+<!DOCTYPE globals SYSTEM "../../../../dtd/globals.dtd" [
+<!ENTITY translations SYSTEM "../../xmlfiles/translations.xml">
+]>
 <globals>
-
     <colors>
         <color name="clrBackground">77000066</color>
         <color name="clrButtonBlueBg">CC2233CC</color>
@@ -39,6 +39,7 @@
         <color name="clrMenuItemSelectable">FFFCFCFC</color>
         <color name="clrMenuScrollbarShown">FFFCC024</color>
         <color name="clrMenuScrollbarTotal">FFFCFCFC</color>
+        <color name="clrMenuText">FFFCFCFC</color>
         <color name="clrMenuTitleBg">CC2BA7F1</color>
         <color name="clrMenuTitleFg">FF000000</color>
         <color name="clrMessageErrorBg">FFFC1414</color>
@@ -56,41 +57,29 @@
         <color name="clrReplayProgressRest">FFFCFCFC</color>
         <color name="clrReplayProgressSeen">CC22BB22</color>
         <color name="clrReplayProgressSelected">CCCC1111</color>
+        <color name="clrReplaySymbolOff">77777777</color>
+        <color name="clrReplaySymbolOn">FFFCC024</color>
         <color name="clrReplayTitleBg">FFFCFCFC</color>
         <color name="clrReplayTitleFg">FF000000</color>
         <color name="clrReplayTotal">FFFCFCFC</color>
+        <color name="clrSymbolRecBg">FFFC1414</color>
+        <color name="clrSymbolRecFg">FFFCFCFC</color>
         <color name="clrTransparent">00000000</color>
         <color name="clrVolumeBarLower">77000066</color>
         <color name="clrVolumeBarUpper">FFCCBB22</color>
         <color name="clrVolumePrompt">FFFCFCFC</color>
+        <color name="clrVolumeSymbolMuteBg">FFFCFCFC</color>
+        <color name="clrVolumeSymbolMuteFg">CCCC1111</color>
+        <color name="clrVolumeSymbolVolumeBg">77000066</color>
+        <color name="clrVolumeSymbolVolumeFg">FFCCBB22</color>
     </colors>
 
     <variables>
     </variables>
 
-    <translations>
-        <token name="tr(length)">
-            <trans lang="en_EN">Length</trans>
-            <trans lang="de_DE">Länge</trans>
-        </token>
-        <token name="tr(size)">
-            <trans lang="en_EN">Size</trans>
-            <trans lang="de_DE">Größe</trans>
-        </token>
-        <token name="tr(free)">
-            <trans lang="en_EN">free</trans>
-            <trans lang="de_DE">frei</trans>
-        </token>
-        <token name="tr(disc)">
-            <trans lang="en_EN">Disc</trans>
-            <trans lang="de_DE">Disk</trans>
-        </token>
-        <token name="tr(volume)">
-            <trans lang="en_EN">Volume</trans>
-            <trans lang="de_DE">Lautstärke</trans>
-        </token>
-    </translations>
+    &translations;
 
     <fonts>
     </fonts>
-</globals>
+
+  </globals>

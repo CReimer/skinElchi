@@ -1,0 +1,22 @@
+<translations>
+    <token name="tr(length)">
+        <trans lang="en_EN">Length</trans>
+        <trans lang="de_DE">Länge</trans>
+    </token>
+    <token name="tr(size)">
+        <trans lang="en_EN">Size</trans>
+        <trans lang="de_DE">Größe</trans>
+    </token>
+    <token name="tr(free)">
+        <trans lang="en_EN">free</trans>
+        <trans lang="de_DE">frei</trans>
+    </token>
+    <token name="tr(disc)">
+        <trans lang="en_EN">Disc</trans>
+        <trans lang="de_DE">Disk</trans>
+    </token>
+    <token name="tr(volume)">
+        <trans lang="en_EN">Volume</trans>
+        <trans lang="de_DE">Lautstärke</trans>
+    </token>
+</translations>
