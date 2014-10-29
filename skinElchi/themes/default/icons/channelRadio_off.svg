@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="55"
+   height="33"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="channelRadio.svg"
+   inkscape:export-filename="/home/christopher/skinelchi/prepared/Caudio_on.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="-41.701036"
+     inkscape:cy="78.450157"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3789"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="995"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1019.3622)">
+    <g
+       id="g3789">
+      <path
+         style="fill:#777777;fill-opacity:0.466666666666667"
+         d="m 24.75,0.875 c 0,6.7395833 0,13.479167 0,20.21875 C 23.486881,20.947258 22.165525,20.875 20.78125,20.875 13.035745,20.875 6.75,23.338238 6.75,26.375 c 0,3.036762 6.285745,5.5 14.03125,5.5 7.745505,0 14.03125,-2.463238 14.03125,-5.5 0,-1.504893 -1.56421,-2.850883 -4.0625,-3.84375 l 0,-15.15625 c 12.449044,-1.1767762 8.464791,5.224918 9,7.5 0,0 2.178494,0.0095 3,0 16.167655,-11.409002 -14.723608,-13.4224684 -18,-14 z"
+         transform="translate(0,1019.3622)"
+         id="path3001-4"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccssssccccc" />
+    </g>
+  </g>
+</svg>

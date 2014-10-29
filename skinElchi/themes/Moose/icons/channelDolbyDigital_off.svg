@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="55"
+   height="33"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="Cdolbydigital.svg"
+   inkscape:export-filename="/home/christopher/skinelchi/prepared/Cdolbydigital_off.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="-69.380018"
+     inkscape:cy="70.65759"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="995"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1019.3622)">
+    <path
+       style="fill:#5f5f5f;fill-opacity:1"
+       d="m 28.43117,1023.5769 0,25 20,0 0,-25 -20,0 z m 17.09375,2.0625 0.0312,21 c -7.06323,-0.7483 -12.61184,-4.247 -13.8125,-8.7187 -1.55711,-5.7993 4.62534,-11.295 13.78125,-12.2813 z"
+       id="rect3007-6"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#5f5f5f;fill-opacity:1"
+       d="m 6.46242,1023.5457 0,25 20,0 0,-25 -20,0 z m 3,2 c 9.15591,0.9862 15.33836,6.482 13.78125,12.2812 -1.20066,4.4718 -6.74927,7.9705 -13.8125,8.7188 l 0.0312,-21 z"
+       id="rect3007"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

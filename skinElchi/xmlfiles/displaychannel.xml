@@ -94,22 +94,26 @@
       <area x="80%" y="81%" width="20%" height="4%" layer="2">
           <!-- x: 14% from hasVPS symbol + 2% offset*2 = 18% -->
           <drawimage condition="not{hasVT}" name="vt" imagetype="icon" path="channelTeletext_off" x="18%" valign="center" width="14%" height="71%"/>
-          <drawimage condition="not{isRadio}" name="radio" imagetype="icon" path="channelAudio_off" x="{posx(vt)} + {width(vt)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
-          <drawimage condition="not{isDolby}" name="dolbydigital" imagetype="icon" path="channelDolbyDigital_off" x="{posx(radio)} + {width(radio)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+          <drawimage condition="not{isRadio}" name="audio" imagetype="icon" path="channelAudio_off" x="{posx(vt)} + {width(vt)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
+          <drawimage condition="not{isDolby}" name="dolbydigital" imagetype="icon" path="channelDolbyDigital_off" x="{posx(audio)} + {width(audio)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
           <drawimage condition="not{isEncrypted}" name="encrypted" imagetype="icon" path="channelEncrypted_off" x="{posx(dolbydigital)} + {width(dolbydigital)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
           <drawimage condition="not{isRecording}" name="rec" imagetype="icon" path="symbolRec_off" x="{posx(encrypted)} + {width(encrypted)} + {areawidth} * 0.02" valign="center" width="14%" height="71%"/>
 
           <drawimage condition="{hasVT}" imagetype="icon" path="channelTeletext_on" x="{posx(vt)}" valign="center" width="{width(vt)}" height="{height(vt)}"/>
-          <drawimage condition="{isRadio}" imagetype="icon" path="channelAudio_on" x="{posx(radio)}" valign="center" width="{width(radio)}" height="{height(radio)}"/>
+          <drawimage condition="isset{trackdesc}++not{isRadio}" imagetype="icon" path="channelAudio_on" x="{posx(audio)}" valign="center" width="{width(audio)}" height="{height(audio)}"/>
+          <drawimage condition="{isRadio}" imagetype="icon" path="channelRadio_on" x="{posx(audio)}" valign="center" width="{width(audio)}" height="{height(audio)}"/>
           <drawimage condition="{isDolby}" imagetype="icon" path="channelDolbyDigital_on" x="{posx(dolbydigital)}" valign="center" width="{width(dolbydigital)}" height="{height(dolbydigital)}"/>
           <drawimage condition="{isEncrypted}" imagetype="icon" path="channelEncrypted_on" x="{posx(encrypted)}" valign="center" width="{width(encrypted)}" height="{height(encrypted)}"/>
           <drawimage condition="{isRecording}" imagetype="icon" path="symbolRec_on" x="{posx(rec)}" valign="center" width="{width(rec)}" height="{height(rec)}"/>
       </area>
+    </statusinfo>
+    <audioinfo>
       <!-- x: 32% (background) -->
       <area x="32%" y="{areaheight}*0.765" width="{areawidth}-{areawidth}*0.32" height="4%" layer="1">
-        <drawtext x="0" y="0" align="right" valign="center" font="{vdrSml}" fontsize="100%" color="{clrChannelSymbolOn}" text="{trackdesc} /{numaudiotracks} ({tracklang})  " />
+        <drawtext condition="isset{trackdesc}" x="0" y="0" align="right" valign="center" font="{vdrSml}" fontsize="100%" color="{clrChannelSymbolOn}" text="{trackdesc} /{numaudiotracks} ({tracklang})  " />
+        <drawtext x="0" y="0" align="right" valign="center" font="{vdrSml}" fontsize="100%" color="{clrChannelSymbolOn}" text="({tracklang})  " />
       </area>
-    </statusinfo>
+    </audioinfo>
 
     <screenresolution>
     </screenresolution>
