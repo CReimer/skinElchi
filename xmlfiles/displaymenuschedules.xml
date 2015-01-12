@@ -51,7 +51,7 @@
             <area condition="not{separator}++{whatsonnow}++not{current}" x="25%" width="4%" layer="3">
               <drawrectangle x="0" y="0" valign="center" width="100%" height="70%" color="{clrMenuItemSelectable}" />
               <drawrectangle x="2" y="0" valign="center" width="{areawidth}-4" height="{areaheight}*0.7-4" color="{clrTransparent}" />
-              <drawrectangle x="0" y="0" valign="center" width="{areawidth}*0.96*{elapsed}/{duration}" height="70%" color="{clrMenuItemSelectable}" />
+                <drawrectangle x="0" y="0" valign="center" width="{areawidth}*0.96*{elapsed}/{duration}" height="70%" color="{clrMenuItemSelectable}" />
             </area>
             <!-- current element whatsonnow -->
             <area condition="not{separator}++{whatsonnow}++{current}" x="0" width="100%" layer="3">
@@ -70,7 +70,7 @@
             </area>
             <!-- day or channel separator -->
             <area condition="{separator}" x="0" width="100%" layer="3">
-                <drawtext x="{width(sep)} + 20" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemNonSelectable}" text="{title}" />
+                <drawtext x="{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemNonSelectable}" text="{title}" />
             </area>
             <!-- element whatsonnext -->
             <area condition="not{separator}++{whatsonnext}++not{current}" x="0" width="100%" layer="3">
@@ -91,10 +91,6 @@
                 <drawimage condition="{timerfull}" imagetype="icon" path="menuItemClock_on" x="{posx(vps)}+{width(vps)}+{areaheight}*0.1" valign="center" width="{areaheight}*0.722" height="92%" />
                 <drawtext name="title" x="{posx(pic_timer)}+{width(pic_timer)}+{areaheight}" y="0" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text="{title}" />
                 <drawtext condition="isset{shorttext}" x="{posx(title)} + {width(title)}" y="0" width="{areawidth}-{posx(title)}-{width(title)}-{areaheight}*0.5" valign="center" font="{vdrOsd}" fontsize="100%" color="{clrMenuItemCurrentFg}" text=" ~ {shorttext}" />
-            </area>
-            <!-- day or channel separator -->
-            <area condition="{separator}" x="0" width="28%" layer="3">
-                <drawtext x="{width(sep)} + 20" valign="center" font="{vdrOsd}" fontsize="60%" color="{clrMenuItemNonSelectable}" text="{title}" />
             </area>
         </listelement>
     </menuitems>
