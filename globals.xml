@@ -1,4 +1,7 @@
-<translations>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE globals SYSTEM "../../dtd/globals.dtd">
+<globals>
+  <translations>
     <token name="tr(length)">
         <trans lang="en_EN">Length</trans>
         <trans lang="de_DE">Länge</trans>
@@ -19,4 +22,5 @@
         <trans lang="en_EN">Volume</trans>
         <trans lang="de_DE">Lautstärke</trans>
     </token>
-</translations>
+  </translations>
+</globals>

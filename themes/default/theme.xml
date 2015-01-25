@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE globals SYSTEM "../../../../dtd/globals.dtd" [
-<!ENTITY translations SYSTEM "../../xmlfiles/translations.xml">
-]>
+<!DOCTYPE globals SYSTEM "../../../../dtd/globals.dtd">
 <globals>
     <colors>
         <color name="clrBackground">77000066</color>
@@ -13,19 +11,19 @@
         <color name="clrButtonRedFg">FFFCFCFC</color>
         <color name="clrButtonYellowBg">CCEEEE22</color>
         <color name="clrButtonYellowFg">FF000000</color>
-        <color name="clrChannelDateBg">88FFFFFF</color>
+        <color name="clrChannelDateBg">FFFCFCFC</color>
         <color name="clrChannelDateFg">FF000000</color>
         <color name="clrChannelEpgShortText">FFCCBB22</color>
         <color name="clrChannelEpgTimeBg">AABB0000</color>
         <color name="clrChannelEpgTimeFg">FFDDDDDD</color>
         <color name="clrChannelEpgTitleBg">88000000</color>
         <color name="clrChannelEpgTitleFg">FF00FCFC</color>
-        <color name="clrChannelNameBg">FFDDDDDD</color>
-        <color name="clrChannelNameFg">FF000000</color>
-        <color name="clrChannelSymbolOff">FF5F5F5F</color>
-        <color name="clrChannelSymbolOn">FFCCBB22</color>
-        <color name="clrChannelTimebarRest">77000066</color>
-        <color name="clrChannelTimebarSeen">FF5F5F5F</color>
+        <color name="clrChannelNameBg">CC2BA7F1</color>
+        <color name="clrChannelNameFg">FFFCFCFC</color>
+        <color name="clrChannelSymbolOff">77777777</color>
+        <color name="clrChannelSymbolOn">FFFCC024</color>
+        <color name="clrChannelTimebarRest">7F000000</color>
+        <color name="clrChannelTimebarSeen">FFFCC024</color>
         <color name="clrMenuDate">FF000000</color>
         <color name="clrMenuEventDescription">FFFCC024</color>
         <color name="clrMenuEventShortText">FFFCFCFC</color>
@@ -42,20 +40,20 @@
         <color name="clrMenuText">FFFCFCFC</color>
         <color name="clrMenuTitleBg">CC2BA7F1</color>
         <color name="clrMenuTitleFg">FF000000</color>
-        <color name="clrMessageErrorBg">FFCC1111</color>
-        <color name="clrMessageErrorFg">FFDDDDDD</color>
+        <color name="clrMessageErrorBg">FFFC1414</color>
+        <color name="clrMessageErrorFg">FFFCFCFC</color>
         <color name="clrMessageInfoBg">CC22BB22</color>
         <color name="clrMessageInfoFg">FF000000</color>
         <color name="clrMessageStatusBg">CC2BA7F1</color>
         <color name="clrMessageStatusFg">FF000000</color>
-        <color name="clrMessageWarningBg">FF22BBCC</color>
+        <color name="clrMessageWarningBg">FFFCC024</color>
         <color name="clrMessageWarningFg">FF000000</color>
         <color name="clrReplayCurrent">FFFCFCFC</color>
         <color name="clrReplayModeJump">FFFCFCFC</color>
         <color name="clrReplayProgressCurrent">CCCC1111</color>
         <color name="clrReplayProgressMark">FF000000</color>
         <color name="clrReplayProgressRest">FFFCFCFC</color>
-        <color name="clrReplayProgressSeen">FF33BB33</color>
+        <color name="clrReplayProgressSeen">CC22BB22</color>
         <color name="clrReplayProgressSelected">CCCC1111</color>
         <color name="clrReplaySymbolOff">77777777</color>
         <color name="clrReplaySymbolOn">FFFCC024</color>
@@ -68,18 +66,9 @@
         <color name="clrVolumeBarLower">77000066</color>
         <color name="clrVolumeBarUpper">FFCCBB22</color>
         <color name="clrVolumePrompt">FFFCFCFC</color>
-        <color name="clrVolumeSymbolMuteBg">00FCFCFC</color>
+        <color name="clrVolumeSymbolMuteBg">FFFCFCFC</color>
         <color name="clrVolumeSymbolMuteFg">CCCC1111</color>
         <color name="clrVolumeSymbolVolumeBg">77000066</color>
         <color name="clrVolumeSymbolVolumeFg">FFCCBB22</color>
     </colors>
-
-    <variables>
-    </variables>
-
-    &translations;
-
-    <fonts>
-    </fonts>
-
   </globals>

@@ -1,85 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE globals SYSTEM "../../../../dtd/globals.dtd" [
-<!ENTITY translations SYSTEM "../../xmlfiles/translations.xml">
-]>
+<!DOCTYPE globals SYSTEM "../../../../dtd/globals.dtd">
 <globals>
     <colors>
-        <color name="clrBackground">AAFF80F0</color>
+        <color name="clrBackground">AA111111</color>
         <color name="clrButtonBlueBg">CC0000CC</color>
-        <color name="clrButtonBlueFg">FFFFD0F0</color>
+        <color name="clrButtonBlueFg">FFEEEEFF</color>
         <color name="clrButtonGreenBg">CC40A040</color>
-        <color name="clrButtonGreenFg">FFFFD0F0</color>
+        <color name="clrButtonGreenFg">FFFFFFFF</color>
         <color name="clrButtonRedBg">CCCC2222</color>
-        <color name="clrButtonRedFg">FFFFD0F0</color>
+        <color name="clrButtonRedFg">FFFFFFFF</color>
         <color name="clrButtonYellowBg">CCCCBB22</color>
         <color name="clrButtonYellowFg">FF000000</color>
         <color name="clrChannelDateBg">AAEEEEEE</color>
         <color name="clrChannelDateFg">FF000000</color>
         <color name="clrChannelEpgShortText">FFBBBB22</color>
-        <color name="clrChannelEpgTimeBg">AAFF00F0</color>
+        <color name="clrChannelEpgTimeBg">AA1111CC</color>
         <color name="clrChannelEpgTimeFg">FFDDDDDD</color>
-        <color name="clrChannelEpgTitleBg">AA880044</color>
+        <color name="clrChannelEpgTitleBg">AA111111</color>
         <color name="clrChannelEpgTitleFg">FF00EEEE</color>
         <color name="clrChannelNameBg">CC2BA7F1</color>
         <color name="clrChannelNameFg">FFFCFCFC</color>
-        <color name="clrChannelSymbolOff">99885544</color>
-        <color name="clrChannelSymbolOn">FFFFBB00</color>
-        <color name="clrChannelTimebarRest">88551100</color>
+        <color name="clrChannelSymbolOff">99111111</color>
+        <color name="clrChannelSymbolOn">FFEECC22</color>
+        <color name="clrChannelTimebarRest">88111100</color>
         <color name="clrChannelTimebarSeen">CCFCC024</color>
-        <color name="clrMenuDate">FFEEBBEE</color>
-        <color name="clrMenuEventDescription">FFFFDDEE</color>
-        <color name="clrMenuEventShortText">FF111111</color>
+        <color name="clrMenuDate">FFBBBBEE</color>
+        <color name="clrMenuEventDescription">FF9999EE</color>
+        <color name="clrMenuEventShortText">FF22AA44</color>
         <color name="clrMenuEventTime">FFFCFCFC</color>
-        <color name="clrMenuEventTitle">FFBB1122</color>
+        <color name="clrMenuEventTitle">FFCCBB22</color>
         <color name="clrMenuEventVpsBg">EECCCCCC</color>
         <color name="clrMenuEventVpsFg">FF000000</color>
-        <color name="clrMenuItemCurrentBg">DDFFF0F0</color>
+        <color name="clrMenuItemCurrentBg">CC6D93DB</color>
         <color name="clrMenuItemCurrentFg">FF000000</color>
-        <color name="clrMenuItemNonSelectable">CCFF99EE</color>
+        <color name="clrMenuItemNonSelectable">CC6D93DB</color>
         <color name="clrMenuItemSelectable">CCFCFCFC</color>
         <color name="clrMenuScrollbarShown">CCFCC024</color>
-        <color name="clrMenuScrollbarTotal">88551100</color>
+        <color name="clrMenuScrollbarTotal">88111100</color>
         <color name="clrMenuText">FFEEBB22</color>
-        <color name="clrMenuTitleBg">CCFF00C0</color>
+        <color name="clrMenuTitleBg">CC0000C0</color>
         <color name="clrMenuTitleFg">FFEEEEEE</color>
-        <color name="clrMessageErrorBg">BBFF80F0</color>
-        <color name="clrMessageErrorFg">FFDD1111</color>
-        <color name="clrMessageInfoBg">BBFF80F0</color>
+        <color name="clrMessageErrorBg">CCCC2222</color>
+        <color name="clrMessageErrorFg">FFA0D0C0</color>
+        <color name="clrMessageInfoBg">BB337633</color>
         <color name="clrMessageInfoFg">FF99FF99</color>
-        <color name="clrMessageStatusBg">BBFF80F0</color>
-        <color name="clrMessageStatusFg">FF5555FF</color>
-        <color name="clrMessageWarningBg">BBFF80F0</color>
-        <color name="clrMessageWarningFg">FFCCCC11</color>
-        <color name="clrReplayCurrent">BBF0F0F0</color>
+        <color name="clrMessageStatusBg">BB1311CC</color>
+        <color name="clrMessageStatusFg">FF9999FF</color>
+        <color name="clrMessageWarningBg">BBCCBB33</color>
+        <color name="clrMessageWarningFg">FF222200</color>
+        <color name="clrReplayCurrent">AAF0F0F0</color>
         <color name="clrReplayModeJump">AAFCFCFC</color>
         <color name="clrReplayProgressCurrent">AACC1111</color>
         <color name="clrReplayProgressMark">FF000000</color>
-        <color name="clrReplayProgressRest">AADD77BB</color>
-        <color name="clrReplayProgressSeen">AAFF3333</color>
+        <color name="clrReplayProgressRest">AACCCCCC</color>
+        <color name="clrReplayProgressSeen">AA22AA33</color>
         <color name="clrReplayProgressSelected">AACC1111</color>
-        <color name="clrReplaySymbolOff">77882233</color>
+        <color name="clrReplaySymbolOff">77222222</color>
         <color name="clrReplaySymbolOn">FFEEBB22</color>
-        <color name="clrReplayTitleBg">AAEEAADD</color>
+        <color name="clrReplayTitleBg">AACCCCCC</color>
         <color name="clrReplayTitleFg">FF112222</color>
-        <color name="clrReplayTotal">BBCCCCEE</color>
+        <color name="clrReplayTotal">AABBBBEE</color>
         <color name="clrSymbolRecBg">FFFC1414</color>
         <color name="clrSymbolRecFg">FFFCFCFC</color>
         <color name="clrTransparent">00000000</color>
-        <color name="clrVolumeBarLower">AA881111</color>
+        <color name="clrVolumeBarLower">AA111111</color>
         <color name="clrVolumeBarUpper">CCCCBB22</color>
         <color name="clrVolumePrompt">AAFCFCFC</color>
         <color name="clrVolumeSymbolMuteBg">AAFCFCFC</color>
         <color name="clrVolumeSymbolMuteFg">AACC1111</color>
-        <color name="clrVolumeSymbolVolumeBg">CC551100</color>
+        <color name="clrVolumeSymbolVolumeBg">CC111100</color>
         <color name="clrVolumeSymbolVolumeFg">CCCCBB22</color>
     </colors>
-
-    <variables>
-    </variables>
-
-    &translations;
-
-    <fonts>
-    </fonts>
-
-  </globals>
+</globals>

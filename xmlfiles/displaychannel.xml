@@ -68,7 +68,7 @@
         <drawtext x="0" y="0" align="center" font="{vdrOsd}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgTimeFg}" text="{currentstart}"/>
         <drawtext x="0" y="51%" align="center" font="{vdrOsd}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgTimeFg}" text="{nextstart}"/>
       </area>
-      <area x="7%" y="85%" width="{areawidth}-{areawidth}*0.1 - {areawidth}*0.065" height="15%" layer="2">
+      <area x="7%" y="85%" width="{areawidth}-{areawidth}*0.1 - {areawidth}*0.02" height="15%" layer="2">
         <drawtext name="currenttitle" x="2%" y="0" font="{vdrOsd}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgTitleFg}" text="{currenttitle}"/>
         <drawtext x="2%" y="23%" font="{vdrSml}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgShortText}" text="{currentsubtitle}"/>
         <drawtext x="2%" y="51%" font="{vdrOsd}" fontsize="{areaheight}*0.2666" color="{clrChannelEpgTitleFg}" text="{nexttitle}"/>

@@ -1,6 +1,6 @@
 <menudetailedepg x="0" y="0" width="100%" height="100%" fadetime="0">
 
-    <detailheader debug="true">
+    <detailheader>
       <area x="1%" y="6%" width="99%" height="16%" layer="2">
         <drawtext name="date" x="0" y="0" fontsize="25%" font="{vdrOsd}" color="{clrMenuEventTime}" text="{day} {date} {start} - {stop}"/>
         <drawrectangle condition= "isset{vps}" x="0" y="{posy(date)} + {height(date)}" width="{width(vps_text)}" height="25%" color="{clrMenuEventVpsBg}" />

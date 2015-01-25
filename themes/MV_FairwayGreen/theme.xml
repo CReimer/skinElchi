@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE globals SYSTEM "../../../../dtd/globals.dtd" [
-<!ENTITY translations SYSTEM "../../xmlfiles/translations.xml">
-]>
+<!DOCTYPE globals SYSTEM "../../../../dtd/globals.dtd">
 <globals>
     <colors>
         <color name="clrBackground">AA112211</color>
@@ -73,13 +71,4 @@
         <color name="clrVolumeSymbolVolumeBg">CC112200</color>
         <color name="clrVolumeSymbolVolumeFg">CCCCBB22</color>
     </colors>
-
-    <variables>
-    </variables>
-
-    &translations;
-
-    <fonts>
-    </fonts>
-
-  </globals>
+</globals>
